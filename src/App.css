@@ -1,0 +1,519 @@
+/* ===== HEADER ===== */
+.header {
+  background: linear-gradient(135deg, var(--cinemex-red) 0%, var(--cinemex-red-dark) 100%);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-lg);
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-logo span {
+  color: var(--cinemex-gold);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  padding: 8px 24px;
+  border-radius: var(--radius-xl);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--transition-fast);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: var(--white);
+  color: var(--cinemex-red);
+}
+
+/* ===== SECCIONES ===== */
+.section {
+  padding: 60px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.section-title span {
+  color: var(--cinemex-red);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--gray-400);
+  font-size: 1rem;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.section-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cinemex-red), var(--cinemex-gold));
+  margin: 0 auto 16px;
+  border-radius: 2px;
+}
+
+/* ===== CARTELERA - MOVIE CARDS ===== */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.movie-card {
+  background: linear-gradient(145deg, var(--gray-800) 0%, var(--gray-900) 100%);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-poster::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.movie-info {
+  padding: 16px;
+}
+
+.movie-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.movie-genre {
+  font-size: 0.8rem;
+  color: var(--cinemex-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.movie-schedule {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.schedule-tag {
+  background-color: rgba(228, 0, 43, 0.15);
+  color: var(--cinemex-red-light);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(228, 0, 43, 0.3);
+}
+
+/* ===== BOTONES ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--transition-fast);
+  text-align: center;
+  width: 100%;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--cinemex-red) 0%, var(--cinemex-red-dark) 100%);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--cinemex-red-light) 0%, var(--cinemex-red) 100%);
+  box-shadow: 0 4px 15px rgba(228, 0, 43, 0.4);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--cinemex-gold) 0%, var(--cinemex-gold-dark) 100%);
+  color: var(--gray-900);
+}
+
+.btn-gold:hover {
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ===== ALIMENTOS ===== */
+.alimentos-section {
+  background: linear-gradient(180deg, var(--cinemex-dark) 0%, var(--cinemex-dark-light) 100%);
+}
+
+.food-category {
+  margin-bottom: 48px;
+}
+
+.food-category:last-child {
+  margin-bottom: 0;
+}
+
+.category-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-left: 16px;
+  border-left: 4px solid var(--cinemex-red);
+  color: var(--white);
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.food-card {
+  background: linear-gradient(145deg, var(--gray-800) 0%, var(--gray-900) 100%);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.food-image {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  position: relative;
+}
+
+.food-info {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.food-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.food-description {
+  font-size: 0.85rem;
+  color: var(--gray-400);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.food-price {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--cinemex-gold);
+  margin-bottom: 12px;
+}
+
+/* ===== SECCIÓN OTROS ===== */
+.otros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.promo-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.promo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+.promo-banner {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.promo-banner .promo-icon {
+  font-size: 4rem;
+  z-index: 1;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.promo-content {
+  padding: 24px;
+  background: linear-gradient(145deg, var(--gray-800) 0%, var(--gray-900) 100%);
+}
+
+.promo-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-xl);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.badge-red {
+  background-color: rgba(228, 0, 43, 0.2);
+  color: var(--cinemex-red-light);
+  border: 1px solid rgba(228, 0, 43, 0.3);
+}
+
+.badge-gold {
+  background-color: rgba(255, 215, 0, 0.2);
+  color: var(--cinemex-gold);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.badge-blue {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #60A5FA;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.promo-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.promo-description {
+  font-size: 0.9rem;
+  color: var(--gray-400);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: linear-gradient(135deg, var(--gray-900) 0%, #0D0D1A 100%);
+  padding: 48px 40px 24px;
+  margin-top: 20px;
+  border-top: 3px solid var(--cinemex-red);
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.footer-section h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  color: var(--cinemex-red);
+}
+
+.footer-section p,
+.footer-section li {
+  font-size: 0.85rem;
+  color: var(--gray-400);
+  margin-bottom: 8px;
+  transition: color var(--transition-fast);
+}
+
+.footer-section li:hover {
+  color: var(--white);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid var(--gray-800);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+}
+
+/* ===== RESPONSIVE - TABLET ===== */
+@media (max-width: 1024px) {
+  .section {
+    padding: 40px 24px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .otros-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+/* ===== RESPONSIVE - MOBILE ===== */
+@media (max-width: 768px) {
+  .header-top {
+    padding: 10px 16px;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .header-logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-list {
+    padding: 8px 12px;
+    gap: 4px;
+  }
+
+  .nav-link {
+    padding: 6px 14px;
+    font-size: 0.75rem;
+  }
+
+  .section {
+    padding: 32px 16px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .movie-poster {
+    height: 220px;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .otros-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .footer {
+    padding: 32px 16px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
