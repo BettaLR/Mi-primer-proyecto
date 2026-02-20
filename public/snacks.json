@@ -1,0 +1,16 @@
+[
+    {
+        "nombre": "M&M's",
+        "descripcion": "Chocolates de colores con cacahuate",
+        "precio": "$55",
+        "emoji": "🍫",
+        "color": "linear-gradient(135deg, #4a148c, #7b1fa2)"
+    },
+    {
+        "nombre": "Gomitas Haribo",
+        "descripcion": "Ositos de goma suaves y deliciosos",
+        "precio": "$45",
+        "emoji": "🍬",
+        "color": "linear-gradient(135deg, #c62828, #ef5350)"
+    }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "nombre": "Palomitas Grandes",
+        "descripcion": "Palomitas de maíz con mantequilla extra",
+        "precio": "$120",
+        "emoji": "🍿",
+        "color": "linear-gradient(135deg, #f9a825, #fdd835)"
+    },
+    {
+        "nombre": "Hot Dog Clásico",
+        "descripcion": "Hot dog con salchicha premium y aderezo",
+        "precio": "$95",
+        "emoji": "🌭",
+        "color": "linear-gradient(135deg, #e65100, #ff8f00)"
+    },
+    {
+        "nombre": "Nachos con Queso",
+        "descripcion": "Nachos crujientes bañados en queso cheddar",
+        "precio": "$110",
+        "emoji": "🧀",
+        "color": "linear-gradient(135deg, #ff8f00, #ffa726)"
+    }
+]

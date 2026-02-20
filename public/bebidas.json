@@ -1,0 +1,23 @@
+[
+    {
+        "nombre": "Refresco Grande",
+        "descripcion": "Coca-Cola, Sprite o Fanta de 946ml",
+        "precio": "$89",
+        "emoji": "🥤",
+        "color": "linear-gradient(135deg, #b71c1c, #d32f2f)"
+    },
+    {
+        "nombre": "ICEE",
+        "descripcion": "Bebida congelada de cereza o uva",
+        "precio": "$75",
+        "emoji": "🧊",
+        "color": "linear-gradient(135deg, #1565c0, #42a5f5)"
+    },
+    {
+        "nombre": "Café Latte",
+        "descripcion": "Café caliente con leche espumosa",
+        "precio": "$65",
+        "emoji": "☕",
+        "color": "linear-gradient(135deg, #4e342e, #795548)"
+    }
+]

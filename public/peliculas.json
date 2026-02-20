@@ -1,0 +1,112 @@
+[
+    {
+        "titulo": "El Padrino",
+        "genero": "Drama / Crimen",
+        "horarios": [
+            "14:30",
+            "17:00",
+            "20:30"
+        ],
+        "color": "linear-gradient(135deg, #1a1a2e, #16213e, #0f3460)",
+        "emoji": "🎬"
+    },
+    {
+        "titulo": "Baby Driver",
+        "genero": "Acción / Música",
+        "horarios": [
+            "15:00",
+            "18:30",
+            "21:00"
+        ],
+        "color": "linear-gradient(135deg, #e4002b, #b8001f, #8b0000)",
+        "emoji": "🏎️"
+    },
+    {
+        "titulo": "Dune: Parte Dos",
+        "genero": "Ciencia Ficción",
+        "horarios": [
+            "13:00",
+            "16:45",
+            "20:00"
+        ],
+        "color": "linear-gradient(135deg, #c2956a, #8b6914, #5c4033)",
+        "emoji": "🏜️"
+    },
+    {
+        "titulo": "Spider-Man: No Way Home",
+        "genero": "Acción / Aventura",
+        "horarios": [
+            "14:00",
+            "17:30",
+            "21:30"
+        ],
+        "color": "linear-gradient(135deg, #b71c1c, #1565c0, #0d47a1)",
+        "emoji": "🕷️"
+    },
+    {
+        "titulo": "Intensamente 2",
+        "genero": "Animación / Comedia",
+        "horarios": [
+            "12:30",
+            "15:00",
+            "17:30"
+        ],
+        "color": "linear-gradient(135deg, #ff8f00, #f9a825, #ffcc02)",
+        "emoji": "😊"
+    },
+    {
+        "titulo": "Oppenheimer",
+        "genero": "Drama / Historia",
+        "horarios": [
+            "13:30",
+            "17:00",
+            "21:00"
+        ],
+        "color": "linear-gradient(135deg, #ff6f00, #e65100, #bf360c)",
+        "emoji": "💥"
+    },
+    {
+        "titulo": "Wonka",
+        "genero": "Fantasía / Comedia",
+        "horarios": [
+            "12:00",
+            "14:30",
+            "17:00"
+        ],
+        "color": "linear-gradient(135deg, #6a1b9a, #8e24aa, #ab47bc)",
+        "emoji": "🍫"
+    },
+    {
+        "titulo": "Gladiador II",
+        "genero": "Acción / Drama",
+        "horarios": [
+            "15:30",
+            "18:00",
+            "21:30"
+        ],
+        "color": "linear-gradient(135deg, #4e342e, #6d4c41, #8d6e63)",
+        "emoji": "⚔️"
+    },
+    {
+        "titulo": "Deadpool y Wolverine",
+        "genero": "Acción / Comedia",
+        "horarios": [
+            "14:00",
+            "16:30",
+            "20:00"
+        ],
+        "color": "linear-gradient(135deg, #c62828, #d32f2f, #fdd835)",
+        "emoji": "💀"
+    },
+    {
+        "titulo": "Capitán América: Brave New World",
+        "genero": "Acción / Aventura",
+        "horarios": [
+            "13:00",
+            "16:00",
+            "19:30"
+        ],
+        "color": "linear-gradient(135deg, #0d47a1, #1565c0, #c62828)",
+        "emoji": "🛡️"
+    }
+]
