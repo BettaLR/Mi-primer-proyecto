@@ -65,6 +65,20 @@
   background: var(--cinemex-red);
 }
 
+.nav-link.active {
+  color: var(--white);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  background: var(--cinemex-red);
+}
+
 .header-right {
   display: flex;
   align-items: center;
@@ -920,55 +934,343 @@
   margin-bottom: 18px;
 }
 
-/* ===== FOOTER ===== */
-.footer {
-  background: #0D0D0D;
-  padding: 48px 40px 24px;
-  margin-top: 20px;
-  border-top: 2px solid var(--cinemex-red);
-}
-
-.footer-content {
-  max-width: 1400px;
+/* ===== SECCIÓN ESTRENOS (CAROUSEL) ===== */
+.estrenos-section {
+  max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 32px;
-  margin-bottom: 32px;
+  padding: 32px 16px;
 }
 
-.footer-section h4 {
-  font-size: 0.9rem;
-  font-weight: 700;
+.estrenos-title {
+  font-size: 1.6rem;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 14px;
-  color: var(--cinemex-red);
-}
-
-.footer-section p,
-.footer-section li {
-  font-size: 0.82rem;
-  color: var(--gray-400);
-  margin-bottom: 6px;
-  transition: color var(--transition-fast);
-}
-
-.footer-section li:hover {
+  margin-bottom: 20px;
   color: var(--white);
 }
 
-.footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  max-width: 1400px;
-  margin: 0 auto;
+/* Personalizo las flechas de Swiper */
+.estrenos-section .swiper-button-next,
+.estrenos-section .swiper-button-prev {
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all var(--transition-fast);
 }
 
-.footer-bottom p {
-  font-size: 0.75rem;
-  color: var(--gray-500);
+.estrenos-section .swiper-button-next:hover,
+.estrenos-section .swiper-button-prev:hover {
+  background: var(--cinemex-red);
+}
+
+.estrenos-section .swiper-button-next::after,
+.estrenos-section .swiper-button-prev::after {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+/* ===== FOOTER CINEMEX ===== */
+.footer-cinemex {
+  background: #333333;
+  margin-top: 20px;
+}
+
+.footer-cinemex-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  padding: 40px 32px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Líneas verticales de separación entre columnas */
+.footer-col+.footer-col {
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  padding-left: 32px;
+}
+
+/* Columna Contacto */
+.footer-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 4px;
+}
+
+.footer-telefono {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.footer-redes {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-red-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all var(--transition-fast);
+}
+
+.footer-red-icon:hover {
+  background: var(--cinemex-red);
+  border-color: var(--cinemex-red);
+  color: var(--white);
+}
+
+/* Columna Links */
+.footer-col-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col-links li {
+  margin-bottom: 6px;
+}
+
+.footer-col-links a {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color var(--transition-fast);
+  text-decoration: none;
+}
+
+.footer-col-links a:hover {
+  color: var(--white);
+}
+
+/* Columna Apps y pagos */
+.footer-apps-badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.app-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #1C1C1C;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 8px 14px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.app-badge:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.app-badge-icon {
+  font-size: 1.4rem;
+}
+
+.app-badge-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.app-badge-text small {
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+
+.app-badge-text strong {
+  font-size: 0.85rem;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.footer-pagos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pago-text {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.pago-paypal {
+  background: #003087;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+/* Pie inferior */
+.footer-cinemex-bottom {
+  background: #2a2a2a;
+  text-align: center;
+  padding: 14px 20px;
+}
+
+.footer-cinemex-bottom p {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* ===== VISTAS INFORMATIVAS ===== */
+.vista-info {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  animation: fadeIn 0.4s ease;
+}
+
+.btn-volver {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-primary);
+  margin-bottom: 24px;
+}
+
+.btn-volver:hover {
+  border-color: var(--cinemex-red);
+  color: var(--white);
+  background: rgba(228, 0, 43, 0.1);
+}
+
+.vista-titulo {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 32px;
+  border-bottom: 3px solid var(--cinemex-red);
+  padding-bottom: 12px;
+}
+
+.vista-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.vista-bloque {
+  background: #1C1C1C;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.vista-bloque h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--cinemex-red);
+  margin-bottom: 12px;
+}
+
+.vista-bloque p {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+}
+
+.vista-bloque ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.vista-bloque li {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  line-height: 1.5;
+}
+
+.vista-bloque li:last-child {
+  border-bottom: none;
+}
+
+.vista-bloque strong {
+  color: var(--white);
+}
+
+/* Preventas grid */
+.preventas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.preventa-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.preventa-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--cinemex-red);
+  box-shadow: 0 8px 24px rgba(228, 0, 43, 0.15);
+}
+
+.preventa-emoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.preventa-item h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.preventa-fecha {
+  font-size: 0.8rem;
+  color: var(--cinemex-gold);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.preventa-item p:last-child {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.4;
 }
 
 /* ===== ANIMACIONES ===== */
@@ -1142,13 +1444,13 @@
     padding-right: 16px;
   }
 
-  .footer-content {
+  .footer-cinemex-content {
     grid-template-columns: 1fr 1fr;
     gap: 24px;
   }
 
-  .footer {
-    padding: 32px 16px 16px;
+  .footer-cinemex {
+    padding: 0;
   }
 }
 
@@ -1161,7 +1463,7 @@
     display: none;
   }
 
-  .footer-content {
+  .footer-cinemex-content {
     grid-template-columns: 1fr;
   }
 }
